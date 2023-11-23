@@ -2,7 +2,7 @@
 
 A copy of an **IOS calculator app** that uses grid and flex in combination. I have used flex for the IOS notification bar mockup and grid for the keypad ordering of the individual buttons.
 
-![preview of a IOS calculator clone](/Design/SnapShot.jpgDesign/SnapShot.jpg)
+![preview of a IOS calculator clone](/Design/SnapShot.jpg)
 
 ## Release Notes
 

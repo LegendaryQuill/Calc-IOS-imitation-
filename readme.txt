@@ -1,1 +1,0 @@
-My first ever Javascript project

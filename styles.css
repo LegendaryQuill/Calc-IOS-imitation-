@@ -1,0 +1,128 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100);
+
+:root {
+  --darkGrey: #505050;
+  --lightGrey: #d4d4d2;
+  --black: #1c1c1c;
+  --orange: #ff9500;
+}
+
+.logoBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+.rightGroup {
+  display: flex;
+  justify-content: space-around;
+  gap: 0.4rem;
+}
+
+.rightGroup img {
+  width: 1rem;
+  height: 0.8rem;
+}
+
+img {
+  width: 1.5rem;
+  height: 1rem;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  font-weight: 200;
+  color: white;
+}
+
+body {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e0e3eb;
+}
+
+.calcFrame {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+  border-radius: 1.2rem;
+  border: 2px solid;
+  border-color: #505050;
+  padding: 10px 20px 20px;
+  background-color: var(--black);
+}
+
+.display {
+  box-sizing: border-box;
+  min-height: 4px;
+  height: 100%;
+  width: 100%;
+  background-color: var(--black);
+  color: white;
+  padding-right: 0.3rem;
+  font-size: 6rem;
+  text-align: right;
+  vertical-align: bottom;
+  font-weight: 800;
+  border: 0 solid;
+}
+
+button {
+  padding: 6px 6px;
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+  background-color: var(--darkGrey);
+  font-weight: bold;
+  font-size: large;
+  justify-self: center;
+}
+
+button:hover:not(.operatorSide) {
+  background-color: #eaeaea;
+  transition-duration: 0.5s;
+}
+
+button:hover:not(.number, .operatorTop) {
+  background-color: #eaeaea;
+  color: var(--orange);
+  transition-duration: 0.6s;
+}
+
+.number:active {
+  background-color: var(--darkGrey);
+}
+
+.zero {
+  width: 100%;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  border-radius: 100px 100px 100px 100px;
+  text-align: left;
+  padding-left: 24px;
+}
+
+.Keypad {
+  margin: 0.1rem auto 1rem auto;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.operatorSide {
+  background-color: var(--orange);
+}
+
+.operatorTop {
+  background-color: var(--lightGrey);
+  color: black;
+}

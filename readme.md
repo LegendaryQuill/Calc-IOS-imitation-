@@ -4,7 +4,7 @@ A copy of an **IOS calculator app** that uses grid and flex in combination. I ha
 
 ![preview of a IOS calculator clone](/Design/SnapShot.jpg)
 
-## Release Notes
+## Release Notes **_(see projects for future work [project Calculator_IOS](https://github.com/users/LegendaryQuill/projects/2))_**
 
 ### vers. 1.0.0
 

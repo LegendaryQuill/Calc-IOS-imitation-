@@ -68,6 +68,7 @@ body {
   color: white;
   padding-right: 0.3rem;
   font-size: 6rem;
+  font-size-adjust: 0.5;
   text-align: right;
   vertical-align: bottom;
   font-weight: 800;

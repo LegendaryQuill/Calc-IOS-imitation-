@@ -16,6 +16,7 @@
 
 let currentDisplay = "0"; //current display content
 let resultDisplay = false; // result display content
+let historyEquation = "0"; // temp storage to be passed to notepad
 
 // Function to append a value to the current display
 function appendToDisplay(value) {
@@ -32,6 +33,7 @@ function appendToDisplay(value) {
 
   // Update the calculator display to show the new content
   updateDisplay();
+  console.log(value);
 }
 
 // Function to update the calculator display with the current content
@@ -44,13 +46,16 @@ function updateDisplay() {
 function calculateResult() {
   try {
     // Use the eval() function to evaluate the mathematical expression
+    mediate_result = currentDisplay;
     const result = eval(currentDisplay);
+    console.log(result);
 
     // Append the result to the current display, preceded by an equal sign (=)
     currentDisplay += "\n=" + result.toString();
 
     // Update the calculator display with the result
     updateDisplay();
+    calulationHistory(mediate_result, result);
   } catch (error) {
     // If there is an error in the expression (e.g., dividing by zero), display an error message
     currentDisplay += "\nError";
@@ -84,4 +89,57 @@ function clearDisplay() {
 
   // Update the calculator display to show the cleared content
   updateDisplay();
+}
+
+function calulationHistory(mediate_result, result) {
+  let car2 = mediate_result.split("").join(" ");
+
+  const listCalc = [];
+  console.log(result);
+  listCalc.push(car2 + " = " + result);
+
+  print_out(listCalc, car2, result);
+
+  if (listCalc.length >= 0) {
+    document.getElementById("notes_frame").innerHTML +=
+      '<li class="calcHistory">' + listCalc + "</li>";
+    document.getElementById("notes_frame").innerHTML +=
+      '<span id="border"></span>';
+    updateScroll();
+  } else if (listCalc === error) {
+    document.getElementById("notes_frame").innerHTML +=
+      '<li class="calcHistory">error"</li>';
+    document.getElementById("notes_frame").innerHTML +=
+      '<span id="border"></span>';
+  }
+}
+
+function print_out(listCalc, car2, result) {
+  console.log(
+    "typeof Car 2 = " +
+      typeof car2 +
+      "\n" +
+      "typeof listCalc = " +
+      typeof listCalc +
+      "\n" +
+      "typeof result = " +
+      typeof result +
+      "\n" +
+      'Car "2" = ' +
+      car2 +
+      "\n" +
+      "Result = " +
+      result +
+      "\n" +
+      "ListCalc = " +
+      listCalc +
+      "\n" +
+      "Length listCalc = " +
+      listCalc.length
+  );
+}
+
+function updateScroll() {
+  var element = document.getElementById("note-area");
+  element.scrollTop = element.scrollHeight;
 }

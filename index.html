@@ -13,45 +13,57 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
 
-<body>
 
-    <container class="calcFrame">
-        <div class="logoBar">
-            <div class="leftGroup">
-                <div class="clock"><img src="Images/Date.svg"></div>
-            </div>
-            <div class="rightGroup">
-                <div class="cellBar"><img src="Images/Mobile Signal.svg"></div>
-                <div class="wifi"><img src="Images/Wifi.svg"></div>
-                <div class="battery"><img src="Images/Battery.svg"></div>
-            </div>
+
+<container class="calcFrame">
+    <div class="logoBar">
+        <div class="leftGroup">
+            <div class="clock"><img src="Images/Date.svg"></div>
         </div>
-        <input class="display" id="display" value="0" disabled></input>
-        <div class="Keypad">
-            <button onclick="clearLastElement()" class="operatorTop" value="clear">AC</button>
-            <button class="operatorTop">+/-</button>
-            <button class="operatorTop">%</button>
-            <button onclick="appendToDisplay('/')" class="operatorSide">÷</button>
-            <button onclick="appendToDisplay('7')" class="number" value="7">7</button>
-            <button onclick="appendToDisplay('8')" class="number">8</button>
-            <button onclick="appendToDisplay('9')" class="number">9</button>
-            <button onclick="appendToDisplay('*')" class="operatorSide">x</button>
-            <button onclick="appendToDisplay('4')" class="number">4</button>
-            <button onclick="appendToDisplay('5')" class="number">5</button>
-            <button onclick="appendToDisplay('6')" class="number">6</button>
-            <button onclick="appendToDisplay('-')" class="operatorSide">-</button>
-            <button onclick="appendToDisplay('1')" class="number">1</button>
-            <button onclick="appendToDisplay('2')" class="number">2</button>
-            <button onclick="appendToDisplay('3')" class="number">3</button>
-            <button onclick="appendToDisplay('+')" class="operatorSide">+</button>
-            <button onclick="appendToDisplay('0')" class="number zero">0</button>
-            <button onclick="appendToDisplay(',')" class="operator">,</button>
-            <button onclick="calculateResult()" class="operatorSide">=</button>
+        <div class="rightGroup">
+            <div class="cellBar"><img src="Images/Mobile Signal.svg"></div>
+            <div class="wifi"><img src="Images/Wifi.svg"></div>
+            <div class="battery"><img src="Images/Battery.svg"></div>
         </div>
-    </container>
+    </div>
+    <input class="display" id="display" value="0" disabled></input>
+    <div class="Keypad">
+        <button onclick="clearLastElement()" class="operatorTop" value="clear">AC</button>
+        <button class="operatorTop">+/-</button>
+        <button class="operatorTop">%</button>
+        <button onclick="appendToDisplay('/')" class="operatorSide">÷</button>
+        <button onclick="appendToDisplay('7')" class="number" value="7">7</button>
+        <button onclick="appendToDisplay('8')" class="number">8</button>
+        <button onclick="appendToDisplay('9')" class="number">9</button>
+        <button onclick="appendToDisplay('*')" class="operatorSide">x</button>
+        <button onclick="appendToDisplay('4')" class="number">4</button>
+        <button onclick="appendToDisplay('5')" class="number">5</button>
+        <button onclick="appendToDisplay('6')" class="number">6</button>
+        <button onclick="appendToDisplay('-')" class="operatorSide">-</button>
+        <button onclick="appendToDisplay('1')" class="number">1</button>
+        <button onclick="appendToDisplay('2')" class="number">2</button>
+        <button onclick="appendToDisplay('3')" class="number">3</button>
+        <button onclick="appendToDisplay('+')" class="operatorSide">+</button>
+        <button onclick="appendToDisplay('0')" class="number zero">0</button>
+        <button onclick="appendToDisplay(',')" class="operator">,</button>
+        <button onclick="calculateResult()" class="operatorSide">=</button>
+    </div>
+</container>
 
+<container class="note_frame">
+    <span class="logoBar_calc"></span>
+    <header class="display calculations">
+        <p>IOS Calc</p>
+    </header>
+    <div class="line_divider"></div>
+    <notes class="note-area" id="note-area">
+        <div class="notes_frame" id="notes_frame">
+            <!-- Here is the list items inserted -->
+        </div>
+    </notes>
+</container>
 
-    <script src="main.js"></script>
+<script src="main.js"></script>
 </body>
 
 </html>

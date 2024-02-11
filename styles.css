@@ -21,6 +21,10 @@
   gap: 0.4rem;
 }
 
+input[disabled] {
+  pointer-events: none;
+}
+
 .rightGroup img {
   width: 1rem;
   height: 0.8rem;
@@ -181,7 +185,6 @@ button:hover:not(.number, .operatorTop) {
   padding: 2px;
   background: var(--darkGrey);
   border-radius: 20px 10px 10px 20px;
-  
 }
 
 .notes_frame {
@@ -190,7 +193,6 @@ button:hover:not(.number, .operatorTop) {
   padding-top: 10px;
   text-align: right;
   overflow: content;
-  
 }
 
 .calcHistory {

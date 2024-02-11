@@ -143,3 +143,30 @@ function updateScroll() {
   var element = document.getElementById("note-area");
   element.scrollTop = element.scrollHeight;
 }
+
+function handleMouseOver() {
+  let textToCopy = document.getElementById("display").value;
+
+  // Set a timeout to check focus after 3 seconds
+  setTimeout(() => {
+    const displayDiv = document.getElementById("displayDiv");
+
+    if (document.hasFocus() && displayDiv && displayDiv.matches(":hover")) {
+      // Document is in focus, and displayDiv is still being hovered after 3 seconds
+      const copyToClipboard = async (text) => {
+        try {
+          await navigator.clipboard.writeText(text);
+          console.log("Content copied to clipboard");
+        } catch (err) {
+          console.error("Failed to copy: ", err);
+        }
+      };
+
+      copyToClipboard(textToCopy);
+    } else {
+      console.log(
+        "Aborted: Either document is not in focus or displayDiv is not being hovered after 1.5 seconds."
+      );
+    }
+  }, 1500);
+}

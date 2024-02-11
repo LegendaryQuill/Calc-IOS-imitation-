@@ -26,7 +26,9 @@
             <div class="battery"><img src="Images/Battery.svg"></div>
         </div>
     </div>
-    <input class="display" id="display" value="0" disabled></input>
+    <div onclick="clearLastElement()" onmouseover="handleMouseOver()" id="displayDiv">
+        <input class="display" id="display" value="0" disabled></input>
+    </div>
     <div class="Keypad">
         <button onclick="clearLastElement()" class="operatorTop" value="clear">AC</button>
         <button class="operatorTop">+/-</button>

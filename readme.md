@@ -13,8 +13,11 @@ A copy of an **IOS calculator app** that uses grid and flex in combination. I ha
 ### vers. 1.1.0
 
 - Implemented styling
-- Implemented hover state
 
 ### vers. 2.0.0 (not implemented and released)
 
-- implement JavaScript-logic
+- implement JavaScript-logic of basic functioning
+
+### vers. 2.1.0 (not implemented and released)
+
+- Added copy feature when hovering over the display for 1.5 seconds - included with err.handling. and console log message.

@@ -170,3 +170,15 @@ function handleMouseOver() {
     }
   }, 1500);
 }
+
+plusNegativeConvert = () => {
+  currentDisplay = currentDisplay * -1;
+  updateDisplay(currentDisplay);
+  console.log(currentDisplay);
+};
+
+percentConvert = () => {
+  currentDisplay = currentDisplay / 100;
+  updateDisplay(currentDisplay);
+  console.log(currentDisplay);
+};

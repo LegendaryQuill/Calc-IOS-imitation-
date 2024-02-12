@@ -25,3 +25,7 @@ A copy of an **IOS calculator app** that uses grid and flex in combination. I ha
 ### vers. 2.2.0
 
 - added +/- & % functionality to the calculator
+
+### vers. 2.3.0
+
+- added validation when adding ","

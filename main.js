@@ -182,3 +182,18 @@ percentConvert = () => {
   updateDisplay(currentDisplay);
   console.log(currentDisplay);
 };
+
+commaAdd = () => {
+  if (!currentDisplay.includes("," || "=")) {
+    appendToDisplay(",");
+    console.log("if");
+  } else if (currentDisplay.includes("=")) {
+    let rightSideValue = currentDisplay.split("=")[1].trim();
+    let result = parseFloat(rightSideValue);
+    currentDisplay = rightSideValue;
+    updateDisplay(currentDisplay);
+    console.log("else if", currentDisplay);
+  } else {
+    console.log("else");
+  }
+};

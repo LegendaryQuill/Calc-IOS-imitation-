@@ -21,3 +21,7 @@ A copy of an **IOS calculator app** that uses grid and flex in combination. I ha
 ### vers. 2.1.0
 
 - Added copy feature when hovering over the display for 1.5 seconds - included with err.handling. and console log message.
+
+### vers. 2.2.0
+
+- added +/- & % functionality to the calculator

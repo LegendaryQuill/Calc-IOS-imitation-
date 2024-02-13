@@ -121,7 +121,10 @@ function print_out(listCalc, car2, result) {
       listCalc +
       "\n" +
       "Length listCalc = " +
-      listCalc.length
+      listCalc.length +
+      "\n" +
+      "Current display:  = " +
+      currentDisplay
   );
 }
 
@@ -171,7 +174,7 @@ percentConvert = () => {
 
 commaAdd = () => {
   if (!currentDisplay.includes("," || "=")) {
-    appendToDisplay(",");
+    appendToDisplay(".");
     console.log("if");
   } else if (currentDisplay.includes("=")) {
     let rightSideValue = currentDisplay.split("=")[1].trim();

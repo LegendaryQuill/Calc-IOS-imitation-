@@ -3,6 +3,7 @@
 let currentDisplay = "0"; //current display content
 let resultDisplay = false; // result display content
 let historyEquation = "0"; // temp storage to be passed to notepad
+let results = "0";
 
 // Function to append a value to the current display
 function appendToDisplay(value) {
@@ -36,15 +37,21 @@ function calculateResult() {
     const result = eval(currentDisplay);
     console.log(result);
 
+    if (!isFinite(result)) {
+      // If the result is Infinity or -Infinity, display an error message
+      throw new Error("Division by zero");
+    }
+
     // Append the result to the current display, preceded by an equal sign (=)
     currentDisplay += "\n=" + result.toString();
 
     // Update the calculator display with the result
     updateDisplay();
+    results = result;
     calulationHistory(mediate_result, result);
   } catch (error) {
-    // If there is an error in the expression (e.g., dividing by zero), display an error message
-    currentDisplay += "\nError";
+    // If there is an error in the expression, display an error message
+    currentDisplay = "Error";
 
     // Update the calculator display to show the error message
     updateDisplay();

@@ -29,3 +29,7 @@ A copy of an **IOS calculator app** that uses grid and flex in combination. I ha
 ### vers. 2.3.0
 
 - added validation when adding ","
+
+### vers. 2.3.1
+
+- Refactor to "division to zero" calculations

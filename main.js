@@ -20,7 +20,7 @@ function appendToDisplay(value) {
 
   // Update the calculator display to show the new content
   updateDisplay();
-  console.log(value);
+  // console.log(value);
 }
 
 // Function to update the calculator display with the current content
@@ -35,7 +35,7 @@ function calculateResult() {
     // Use the eval() function to evaluate the mathematical expression
     mediate_result = currentDisplay;
     const result = eval(currentDisplay);
-    console.log(result);
+   // console.log(result);
 
     if (!isFinite(result)) {
       // If the result is Infinity or -Infinity, display an error message
@@ -88,10 +88,10 @@ function calulationHistory(mediate_result, result) {
   let car2 = mediate_result.split("").join(" ");
 
   const listCalc = [];
-  console.log(result);
+  // console.log(result);
   listCalc.push(car2 + " = " + result);
 
-  print_out(listCalc, car2, result);
+ // print_out(listCalc, car2, result);
 
   if (listCalc.length >= 0) {
     document.getElementById("notes_frame").innerHTML +=
@@ -170,26 +170,26 @@ function handleMouseOver() {
 plusNegativeConvert = () => {
   currentDisplay = currentDisplay * -1;
   updateDisplay(currentDisplay);
-  console.log(currentDisplay);
+ // console.log(currentDisplay);
 };
 
 percentConvert = () => {
   currentDisplay = currentDisplay / 100;
   updateDisplay(currentDisplay);
-  console.log(currentDisplay);
+ // console.log(currentDisplay);
 };
 
 commaAdd = () => {
   if (!currentDisplay.includes("," || "=")) {
     appendToDisplay(".");
-    console.log("if");
+  //  console.log("if");
   } else if (currentDisplay.includes("=")) {
     let rightSideValue = currentDisplay.split("=")[1].trim();
     let result = parseFloat(rightSideValue);
     currentDisplay = rightSideValue;
     updateDisplay(currentDisplay);
-    console.log("else if", currentDisplay);
+  //  console.log("else if", currentDisplay);
   } else {
-    console.log("else");
+   // console.log("else");
   }
 };

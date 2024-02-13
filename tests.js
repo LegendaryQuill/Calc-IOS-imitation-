@@ -72,7 +72,7 @@ const testDivideZero = () => {
   }
 };
 
-//
+// Test Case #4: addition test
 const testplus = () => {
   try {
     clearDisplay();
@@ -99,7 +99,7 @@ const testplus = () => {
   }
 };
 
-//
+// Test Case #5: subtraction test
 const testMinus = () => {
   try {
     clearDisplay();
@@ -126,7 +126,7 @@ const testMinus = () => {
   }
 };
 
-//
+// Test Case #6: multiply test
 const testMultiply = () => {
   try {
     clearDisplay();
@@ -153,7 +153,7 @@ const testMultiply = () => {
   }
 };
 
-//
+// Test Case #7: divide test
 const testDivide = () => {
   try {
     clearDisplay();

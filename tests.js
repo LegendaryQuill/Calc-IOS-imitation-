@@ -228,6 +228,21 @@ function deleteNotesContent() {
     console.warn("Element with ID 'notes_frame' not found");
   }
 }
+// Test Case #9: Check if text can be copied
+const testCopyText = () => {
+  let textToCopy = "1+1";
+
+  const copyToClipboard = (text) => {
+    try {
+      navigator.clipboard.writeText(text);
+      console.log("✅ Test passed: text copied to clipboard");
+    } catch (err) {
+      console.warn("❌ Test failed: Text not copied to clipboard" + "\n" + err);
+    }
+  };
+
+  copyToClipboard(textToCopy);
+};
 
 // Run the test
 console.log("▶️ conducting tests");
@@ -240,5 +255,6 @@ testMultiply();
 testDivide();
 clearDisplay();
 testNotesContent();
+testCopyText();
 deleteNotesContent();
 console.log("⏹️ tests done");

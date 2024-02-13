@@ -233,3 +233,34 @@ button:hover:not(.number, .operatorTop) {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: var(--orange);
 }
+
+#copyMessage {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 10px;
+  height: fit-content;
+}
+
+#copyMessage {
+  font-weight: 0;
+  font-size: 14px;
+  color: #edf1f2;
+  background-color: black;
+  padding: 0px 40px;
+  border: 2px solid white;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  border-radius: 50px 50px 0px 50px;
+  transition: 922ms;
+  transform: translateY(0);
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-transform: lowercase;
+  display: none;
+}

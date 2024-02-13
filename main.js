@@ -35,7 +35,7 @@ function calculateResult() {
     // Use the eval() function to evaluate the mathematical expression
     mediate_result = currentDisplay;
     const result = eval(currentDisplay);
-   // console.log(result);
+    // console.log(result);
 
     if (!isFinite(result)) {
       // If the result is Infinity or -Infinity, display an error message
@@ -91,7 +91,7 @@ function calulationHistory(mediate_result, result) {
   // console.log(result);
   listCalc.push(car2 + " = " + result);
 
- // print_out(listCalc, car2, result);
+  // print_out(listCalc, car2, result);
 
   if (listCalc.length >= 0) {
     document.getElementById("notes_frame").innerHTML +=
@@ -170,26 +170,70 @@ function handleMouseOver() {
 plusNegativeConvert = () => {
   currentDisplay = currentDisplay * -1;
   updateDisplay(currentDisplay);
- // console.log(currentDisplay);
+  // console.log(currentDisplay);
 };
 
 percentConvert = () => {
   currentDisplay = currentDisplay / 100;
   updateDisplay(currentDisplay);
- // console.log(currentDisplay);
+  // console.log(currentDisplay);
 };
 
 commaAdd = () => {
   if (!currentDisplay.includes("," || "=")) {
     appendToDisplay(".");
-  //  console.log("if");
+    //  console.log("if");
   } else if (currentDisplay.includes("=")) {
     let rightSideValue = currentDisplay.split("=")[1].trim();
     let result = parseFloat(rightSideValue);
     currentDisplay = rightSideValue;
     updateDisplay(currentDisplay);
-  //  console.log("else if", currentDisplay);
+    //  console.log("else if", currentDisplay);
   } else {
-   // console.log("else");
+    console.log("else");
   }
 };
+
+function handleMouseOver2() {
+  const copyMessage = document.getElementById("copyMessage");
+
+  // Set a timeout to check focus after 1.5 seconds
+  setTimeout(() => {
+    const displayDiv = document.getElementById("displayDiv");
+
+    if (document.hasFocus() && displayDiv && displayDiv.matches(":hover")) {
+      // Document is in focus, and displayDiv is still being hovered after 1.5 seconds
+      copyMessage.style.display = "block";
+
+      // Set a timeout to hide the message after 3 seconds
+      setTimeout(() => {
+        if (document.hasFocus() && displayDiv && displayDiv.matches(":hover")) {
+          copyMessage.style.display = "none";
+        }
+      }, 3000);
+    } else {
+      console.log(
+        "Aborted: Either document is not in focus or displayDiv is not being hovered after 1.5 seconds."
+      );
+
+      // If not in focus after 3 seconds, hide the message
+      setTimeout(() => {
+        copyMessage.style.display = "none";
+      }, 3000);
+    }
+  }, 1500);
+}
+
+function copyText() {
+  let textToCopy = document.getElementById("display").value;
+  const copyToClipboard = async (text) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      console.log("Content copied to clipboard");
+    } catch (err) {
+      console.error("Failed to copy: ", err);
+    }
+  };
+
+  copyToClipboard(textToCopy);
+}

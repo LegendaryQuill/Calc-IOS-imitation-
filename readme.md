@@ -33,4 +33,4 @@ A copy of an **IOS calculator app** that uses grid and flex in combination. I ha
 ### vers. 2.3.1
 
 - Refactor to "division to zero" calculations
-- expanded unit test for basic calculations and operator buttons
+- expanded unit test for basic calculations and operator buttons and async on test.js run.

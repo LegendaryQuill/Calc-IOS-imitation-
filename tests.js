@@ -180,6 +180,21 @@ const testDivide = () => {
   }
 };
 
+// delete all li and span inside document.getElementById("notes_frame").innerHTML
+function deleteNotesContent() {
+  const notesFrame = document.getElementById("notes_frame");
+
+  // Check if the notes frame element exists
+  if (notesFrame) {
+    // Remove all child elements (li and span) from the notes frame
+    while (notesFrame.firstChild) {
+      notesFrame.removeChild(notesFrame.firstChild);
+    }
+  } else {
+    console.warn("Element with ID 'notes_frame' not found");
+  }
+}
+
 // Run the test
 testPercentConversion();
 testPostiveNegative();
@@ -189,3 +204,5 @@ testMinus();
 testMultiply();
 testDivide();
 clearDisplay();
+deleteNotesContent();
+
